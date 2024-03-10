@@ -28,7 +28,7 @@ func main() {
 	)
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprint(w, "<h1>koppany csinalta</h1> <hr>")
+		fmt.Fprint(w, "<h1>localhost streaming</h1> <hr>")
 		movielist := listazd(moviePpath)
 		for _, movie := range movielist {
 			fmt.Fprintf(w, "<a href='movies/%s'style='font-size: xx-large;'> %s </a> <br>\n", movie, movie)
